@@ -36,7 +36,8 @@ Route::post('/6289613059:AAFeAq8v8nu58k6n3eZuSkCvplEwsAvsodU/webhook', function 
 
     $bot = new \TelegramBot\Api\Client('6289613059:AAFeAq8v8nu58k6n3eZuSkCvplEwsAvsodU');
 
-
+    $chat_id='534310866';
+    $bot->sendMessage($chat_id,"salom");
     $bot->command(
         'start',
         static function (Message $message) use ($bot) {
