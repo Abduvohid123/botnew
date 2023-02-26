@@ -21,19 +21,19 @@ Route::get('/telegram', function () {
     /**
      * @var $bot \TelegramBot\Api\Client | \TelegramBot\Api\BotApi
      */
-    $bot = new \TelegramBot\Api\Client('5703436363:AAFTIHWpoYzW6lWJizxHBmIj3qljlpEy-x0');
+    $bot = new \TelegramBot\Api\Client('6289613059:AAFeAq8v8nu58k6n3eZuSkCvplEwsAvsodU');
 
     $bot->setWebhook(\route('webhook'));
 
 });
 
-Route::post('/5703436363:AAFTIHWpoYzW6lWJizxHBmIj3qljlpEy-x0/webhook', function () {
+Route::post('/6289613059:AAFeAq8v8nu58k6n3eZuSkCvplEwsAvsodU/webhook', function () {
     /**
      *
      * @var $bot \TelegramBot\Api\Client | \TelegramBot\Api\BotApi
      */
 
-    $bot = new \TelegramBot\Api\Client('5703436363:AAFTIHWpoYzW6lWJizxHBmIj3qljlpEy-x0');
+    $bot = new \TelegramBot\Api\Client('6289613059:AAFeAq8v8nu58k6n3eZuSkCvplEwsAvsodU');
 
 
     $bot->command(
