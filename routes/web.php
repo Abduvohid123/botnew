@@ -23,8 +23,8 @@ Route::get('/telegram', function () {
      * @var $bot \TelegramBot\Api\Client | \TelegramBot\Api\BotApi
      */
     $bot = new \TelegramBot\Api\Client('6289613059:AAFeAq8v8nu58k6n3eZuSkCvplEwsAvsodU');
-    $bot->setWebhook(route('webhook'));
-    dump(route('webhook'));
+    $chat_id='534310866';
+   $bot->sendMessage($chat_id,"salom");
 
 });
 
@@ -41,6 +41,7 @@ Route::post('/6289613059:AAFeAq8v8nu58k6n3eZuSkCvplEwsAvsodU/webhook', function 
         'start',
         static function (Message $message) use ($bot) {
             try {
+
                 $chatId = $message->getChat()->getId();
                 $keyboard = new \TelegramBot\Api\Types\ReplyKeyboardMarkup([
                     [['text' => "Uzbek"], ['text' => "Rus"]],
@@ -94,6 +95,7 @@ Route::post('/6289613059:AAFeAq8v8nu58k6n3eZuSkCvplEwsAvsodU/webhook', function 
             return true;
         }
     );
+
     $bot->run();
 
 
