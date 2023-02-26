@@ -85,7 +85,6 @@ Route::post('/6289613059:AAFeAq8v8nu58k6n3eZuSkCvplEwsAvsodU/webhook', function 
 
 
 
-Route::redirect('/', '/login');
 Route::get('/home', function () {
     if (session('status')) {
         return redirect()->route('admin.home')->with('status', session('status'));
