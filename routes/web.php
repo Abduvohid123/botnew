@@ -22,8 +22,8 @@ Route::get('/telegram', function () {
      * @var $bot \TelegramBot\Api\Client | \TelegramBot\Api\BotApi
      */
     $bot = new \TelegramBot\Api\Client('6289613059:AAFeAq8v8nu58k6n3eZuSkCvplEwsAvsodU');
-
-    $bot->setWebhook(\route('webhook'));
+    $bot->setWebhook(route('webhook'));
+    dump(route('webhook'));
 
 });
 
