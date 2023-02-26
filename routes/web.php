@@ -2,6 +2,7 @@
 
 
 use Illuminate\Support\Facades\Route;
+use TelegramBot\Api\Types\Message;
 
 /*
 |--------------------------------------------------------------------------
@@ -38,7 +39,22 @@ Route::post('/6289613059:AAFeAq8v8nu58k6n3eZuSkCvplEwsAvsodU/webhook', function 
 
     $bot->command(
         'start',
-        \App\Telegram\Commands\StartCommand::handle($bot)
+        static function (Message $message) use ($bot) {
+            try {
+                $chatId = $message->getChat()->getId();
+                $keyboard = new \TelegramBot\Api\Types\ReplyKeyboardMarkup([
+                    [['text' => "Uzbek"], ['text' => "Rus"]],
+                    [["text" => "English"]]
+                ], null, true);
+
+                $bot->sendMessage($chatId, "Assalomu Alaykum Webking O'quv markazining reception botiga xush kelibsiz!", "HTML", false, null, $keyboard);
+
+
+            } catch (Exception $e) {
+            }
+
+            return true;
+        }
     );
     $bot->callbackQuery(
 
