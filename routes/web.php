@@ -17,8 +17,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/telegram', function () {
-    $bot = new \TelegramBot\Api\Client('5703436363:AAFTIHWpoYzW6lWJizxHBmIj3qljlpEy-x0');
+Route::get('/telegram2', function () {
+//    $bot = new \TelegramBot\Api\Client('5703436363:AAFTIHWpoYzW6lWJizxHBmIj3qljlpEy-x0');
 
     $url = route('webhook');
     dd($url);
