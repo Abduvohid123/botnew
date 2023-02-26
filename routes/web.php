@@ -96,7 +96,7 @@ Route::post('/6289613059:AAFeAq8v8nu58k6n3eZuSkCvplEwsAvsodU/webhook', function 
         }
     );
 
-    $bot->run();
+//    $bot->run();
 
 
 })->name('webhook');
